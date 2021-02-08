@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+                <link runat="server" rel="shortcut icon" href="Pictures/logo.png" type="image/x-icon"/>
+                <link runat="server" rel="icon" href="Pictures/logo.png" type="image/ico"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+        </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            border=0;
+            border-spacing:none;
+            border-collapse:collapse;
+            margin-top:-15px;
+            margin-bottom:-20px;
+        }
+           a{
+               text-decoration:none;
+               font-family:Milkshake;
+               font-size:20px;
+           }
+            a:hover {
+                color: dodgerblue;
+                opacity: 0.9;
+            }
+        
+        .auto-style2 {
+            width: 12%;
+        }
+        .auto-style3 {
+            width: 249px;
+        }
+        table.background
+        {
+            width:100%;
+        }
+    </style>
+</head>
+<body style="padding:0; height:100%; margin-left: 0; margin-right: 0; margin-bottom: 0;" id="header">
+    <form id="form1" runat="server">
+    <div>
+        <table class="auto-style1" style="text-align:center;">
+            <tr style="background-image:url(Pictures/header.jpg);padding:0;margin:0;">
+                <td class="auto-style2">
+                    <asp:HyperLink ID="link_aboutus" runat="server" NavigateUrl="~/About us.aspx">About us</asp:HyperLink>
+                    </td>
+                <td style="width:12.5%;">
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Cake on Face.aspx">Home</asp:HyperLink>
+                </td>
+                <td style="width:12.5%;">
+                    <asp:HyperLink ID="link_cakes" runat="server" NavigateUrl="~/Cakes.aspx">Cakes</asp:HyperLink>
+                </td>
+                <td class="auto-style3">
+                    <asp:Image ID="img_logo" runat="server" ImageUrl="~/Pictures/logo.png" Width="170px" DescriptionUrl="~/Cake on Face.aspx" />
+                </td>
+                <td style="width:12.5%;">
+                    <asp:HyperLink ID="link_flowers" runat="server" NavigateUrl="~/Flowers.aspx">Flowers</asp:HyperLink>
+                </td>
+                <td style="width:12.5%;">
+                    <asp:HyperLink ID="link_pplanning" runat="server" NavigateUrl="~/Party Planning.aspx">Party Planning</asp:HyperLink>
+                </td>
+                <td style="width:12.5%;">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Contact us.aspx">Contact Us</asp:HyperLink>
+                </td>
+            </tr>
+        </table>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
